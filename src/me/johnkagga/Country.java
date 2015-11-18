@@ -6,7 +6,7 @@ package me.johnkagga;
 public class Country {
 
     private String name;
-    private int size;
+    private double size;
 
 
     public Country(String name, int size) {
@@ -18,7 +18,7 @@ public class Country {
         return name;
     }
 
-    public int getSize() {
+    public double getSize() {
         return size;
     }
 }
