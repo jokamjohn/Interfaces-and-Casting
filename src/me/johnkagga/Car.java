@@ -3,7 +3,7 @@ package me.johnkagga;
 /**
  * Created by jokamjohn on 11/18/2015.
  */
-public class Car {
+public class Car implements Measureable {
 
     private String name;
 
@@ -20,5 +20,14 @@ public class Car {
 
     public double getFuelEffieciency() {
         return fuelEffieciency;
+    }
+
+    /**
+     * Implements the methods of Measurable
+     * @return Fue; Efficiency
+     */
+    @Override
+    public double getMeasure() {
+        return getFuelEffieciency();
     }
 }

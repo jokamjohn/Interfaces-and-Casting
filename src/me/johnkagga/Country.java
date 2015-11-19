@@ -3,7 +3,7 @@ package me.johnkagga;
 /**
  * Created by jokamjohn on 11/18/2015.
  */
-public class Country {
+public class Country implements Measureable{
 
     private String name;
     private double size;
@@ -20,5 +20,10 @@ public class Country {
 
     public double getSize() {
         return size;
+    }
+
+    @Override
+    public double getMeasure() {
+        return getSize();
     }
 }
