@@ -1,5 +1,8 @@
 package me.johnkagga;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -40,5 +43,24 @@ public class Main {
         //Comparable interface
         int result = "Badminton" .compareTo("Football");
         System.out.println("Result is: "+ result);
+
+        //Using comparable with countries
+        Country uganda = new Country("Uganda", 20000);
+        Country kenya = new Country("kenya", 10000);
+        System.out.println("First: " + uganda.compareTo(kenya));
+        System.out.println("Second: " + kenya.compareTo(uganda));
+        System.out.println("Third: " + uganda.compareTo(uganda));
+        Country madeUp = new Country("madeUp", 10000);
+        System.out.println("Fourth: " + kenya.compareTo(madeUp));
+
+        //Sorting
+        Country[] eastAfricanCountries = {
+                new Country("Uganda", 11745),
+                new Country("Kenya", 24580),
+                new Country("Tanzania", 11750),
+                new Country("Sudan", 45820)
+        };
+        Arrays.sort(eastAfricanCountries);
+        System.out.println(Arrays.asList(eastAfricanCountries));
     }
 }

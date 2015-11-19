@@ -66,6 +66,16 @@ public class Country implements Measurable,Comparable {
             return 0;
         }
 
-        return this.compareTo(country);
+        //Break ties using the name
+        //When two countries have the same area but different names
+        return this.name.compareTo(country.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "name='" + name + '\'' +
+                ", area=" + area +
+                '}';
     }
 }
