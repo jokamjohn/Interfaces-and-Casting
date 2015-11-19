@@ -1,7 +1,5 @@
 package me.johnkagga;
 
-import com.sun.deploy.util.SyncAccess;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -30,13 +28,17 @@ public class Main {
         System.out.println("Car fuel average: " + carAvFuelUse);
 
         //Finding the largest
-        Measureable largestCar = Data.largest(cars);
+        Measurable largestCar = Data.largest(cars);
         System.out.println("Largest car: " + largestCar);
 
         //Casting
-        Measureable largest = Data.largest(countries);
+        Measurable largest = Data.largest(countries);
         Country largestCountry = (Country) largest;
         assert largestCountry != null;
         System.out.println("largest country is: " + largestCountry.getName());
+
+        //Comparable interface
+        int result = "Badminton" .compareTo("Football");
+        System.out.println("Result is: "+ result);
     }
 }

@@ -1,29 +1,71 @@
 package me.johnkagga;
 
+import java.util.Collection;
+
 /**
  * Created by jokamjohn on 11/18/2015.
  */
-public class Country implements Measureable{
+public class Country implements Measurable,Comparable {
 
     private String name;
-    private double size;
+    private double area;
 
 
-    public Country(String name, double size) {
+    public Country(String name, double area) {
         this.name = name;
-        this.size = size;
+        this.area = area;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getSize() {
-        return size;
+    public double getArea() {
+        return area;
     }
 
     @Override
     public double getMeasure() {
-        return getSize();
+        return getArea();
+    }
+
+    /**
+     * Finds out whether the objects are equal
+     *
+     * @param other
+     * @return Boolean
+     */
+    public boolean equals(Object other)
+    {
+        if (other instanceof Country)
+        {
+            Country country = (Country) other;
+            return this.name.equals(country.name)
+                    && this.area == country.area;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public int compareTo(Object otherObject) {
+
+        Country country = (Country) otherObject;
+
+        if (this.area < country.area)
+        {
+            return -1;
+        }
+        else if (this.area > country.area)
+        {
+            return 1;
+        }
+        else if (this.equals(country))
+        {
+            return 0;
+        }
+
+        return this.compareTo(country);
     }
 }

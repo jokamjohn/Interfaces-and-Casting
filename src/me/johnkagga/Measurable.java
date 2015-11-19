@@ -3,7 +3,7 @@ package me.johnkagga;
 /**
  * Created by jokamjohn on 11/18/2015.
  */
-public interface Measureable {
+public interface Measurable {
 
     /**
      * Computes the measure of a given object

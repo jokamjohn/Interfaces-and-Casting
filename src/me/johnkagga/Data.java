@@ -7,16 +7,16 @@ public class Data {
 
     /**
      * Calculates the average
-     * @param measureables
+     * @param measurables
      * @return Average double
      */
-    public static double average (Measureable[] measureables)
+    public static double average (Measurable[] measurables)
     {
         double sum = 0;
 
-        if (measureables.length > 0)
+        if (measurables.length > 0)
         {
-            for (Measureable object: measureables)
+            for (Measurable object: measurables)
             {
                 sum = sum + object.getMeasure();
             }
@@ -25,7 +25,7 @@ public class Data {
             return 0;
         }
 
-        return sum/measureables.length;
+        return sum/ measurables.length;
 
     }
 
@@ -34,16 +34,16 @@ public class Data {
      * @param objects
      * @return
      */
-    public static Measureable largest (Measureable[] objects)
+    public static Measurable largest (Measurable[] objects)
     {
         if (objects.length == 0)
         {
             return null;
         }
 
-            Measureable largest = objects[0];
+            Measurable largest = objects[0];
 
-        for (Measureable current : objects) {
+        for (Measurable current : objects) {
             if (current.getMeasure() > largest.getMeasure()) {
                 largest = current;
             }

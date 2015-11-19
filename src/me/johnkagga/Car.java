@@ -3,7 +3,7 @@ package me.johnkagga;
 /**
  * Created by jokamjohn on 11/18/2015.
  */
-public class Car implements Measureable {
+public class Car implements Measurable {
 
     private String name;
 
