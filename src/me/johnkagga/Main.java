@@ -11,6 +11,21 @@ public class Main {
                 new Country("Sudan", 45820)
         };
 
+        Car[] cars = {
+                new Car("Benz",230),
+                new Car("Toyota", 20),
+                new Car("Alteza", 15),
+                new Car("Nissan", 12)
+        };
+
+        //use of the same algorithm to compute the average
+        //of the different classes that implement Measurable
+
+        double countryAvArea = Data.average(countries);
+        System.out.println("Country average: " + countryAvArea);
+
+        double carAvFuelUse = Data.average(cars);
+        System.out.println("Car fuel average: " + carAvFuelUse);
 
     }
 }

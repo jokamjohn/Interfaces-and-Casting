@@ -9,7 +9,7 @@ public class Country implements Measureable{
     private double size;
 
 
-    public Country(String name, int size) {
+    public Country(String name, double size) {
         this.name = name;
         this.size = size;
     }

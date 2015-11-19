@@ -10,7 +10,7 @@ public class Data {
      * @param measureables
      * @return Average double
      */
-    public static double avearge (Measureable[] measureables)
+    public static double average (Measureable[] measureables)
     {
         double sum = 0;
 

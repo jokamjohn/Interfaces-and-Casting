@@ -9,7 +9,7 @@ public class Car implements Measureable {
 
     private double fuelEffieciency;
 
-    public Car(String name, int fuelEffieciency) {
+    public Car(String name, double fuelEffieciency) {
         this.name = name;
         this.fuelEffieciency = fuelEffieciency;
     }
