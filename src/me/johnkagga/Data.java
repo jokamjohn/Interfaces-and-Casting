@@ -43,15 +43,11 @@ public class Data {
 
             Measureable largest = objects[0];
 
-            for (int i = 0; i < objects.length; i++)
-            {
-                Measureable current = objects[i];
-
-                if (current.getMeasure() > largest.getMeasure())
-                {
-                    largest = current;
-                }
+        for (Measureable current : objects) {
+            if (current.getMeasure() > largest.getMeasure()) {
+                largest = current;
             }
+        }
 
         return largest;
     }

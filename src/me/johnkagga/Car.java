@@ -30,4 +30,16 @@ public class Car implements Measureable {
     public double getMeasure() {
         return getFuelEffieciency();
     }
+
+    /**
+     * This method returns a string of the largest car name
+     *
+     * @return Name of largest car
+     */
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
